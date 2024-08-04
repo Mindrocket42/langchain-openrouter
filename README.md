@@ -38,6 +38,7 @@ OPENROUTER_API_KEY="your_api_key"
 Finally, load the environment variables from the `.env` file in your script:
 
 ```python
+import os
 from langchain_openrouter import OpenRouterLLM
 from dotenv import load_dotenv
 
@@ -47,8 +48,8 @@ load_dotenv()
 # Initialize the OpenRouter LLM
 llm = OpenRouterLLM(
     api_key=os.getenv("OPENROUTER_API_KEY"), 
-    llm_type="gpt-3.5-turbo", 
-    model="openai/gpt-3.5-turbo"
+    llm_type="gpt-4o-mini", 
+    model="openai/gpt-4o-mini"
 )
 
 # ... rest of your code ...
