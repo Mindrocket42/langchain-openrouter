@@ -6,6 +6,10 @@
 
 ## Overview
 
+This repo is a fork of https://github.com/StanMathers/langchain-openrouter. The main difference is addition of this README file
+
+### NB: if you have OpenAI API keys added to PATH, this library and its .env setting will not prevent the routing of API calls to OpenAI rather than Openrouter. LangchainBase defaults to OpenAI and GPT4 and there is no simple change for novice users.
+
 This package provides an integration between OpenRouter and LangChain. It allows you to easily use OpenRouter large language models (LLMs) within your LangChain applications.
 
 ## Installation
@@ -48,8 +52,8 @@ load_dotenv()
 # Initialize the OpenRouter LLM
 llm = OpenRouterLLM(
     api_key=os.getenv("OPENROUTER_API_KEY"), 
-    llm_type="gpt-4o-mini", 
-    model="openai/gpt-4o-mini"
+    llm_type="gpt-4o-mini-2024-07-18", 
+    model="openai/gpt-4o-mini-2024-07-18"
 )
 
 # ... rest of your code ...
@@ -67,8 +71,8 @@ from langchain_openrouter import OpenRouterLLM
 # Initialize the OpenRouter LLM
 llm = OpenRouterLLM(
     api_key="your_api_key", 
-    llm_type="gpt-3.5-turbo", 
-    model="openai/gpt-3.5-turbo"
+    llm_type="gpt-4o-mini-2024-07-18", 
+    model="openai/gpt-4o-mini-2024-07-18"
 )
 
 # Use the LLM to generate text
